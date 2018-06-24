@@ -1,10 +1,10 @@
-apiVersion: v1
-kind: pod
+apiVersion: "v1"
+kind: Pod
 metadata: 
   name: webserver #ชื่อของ Container หลังจากการ pulling image จาก Docker registry
   spec:
     containers:
-    -name:webserver #ชื่อ Container ที่เราจะสร้าง
+    -name: webserver #ชื่อ Container ที่เราจะสร้าง
     image: bitnami/nginx  #ชื่อ Image บนDocker Hub
     imagePullPolicy: Always  #เมื่อไหร่ที่ทำการ run container จะมีการ Pull ใหม่ทุกครั้ง
     command: ["echo","SUCCESS"] #คำส่งจะทำงานเมื่อเราสามารถ Access container ได้
